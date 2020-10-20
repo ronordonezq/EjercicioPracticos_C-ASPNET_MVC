@@ -1,0 +1,27 @@
+﻿@model Ejercicio_Propuestos.Models.Credito
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Calcular</title>
+</head>
+<body>
+    <center>
+        <div>
+            <label>RESULTADO DE PRESTAMO</label><br /><br />
+            <label>Monto Factura: @Model.montoFactura</label><br />
+            <label>Monto Intereses: @Model.montoInteres</label><br />
+            <label>Nuevo Monto Factura: @Model.montoTotal</label><br />
+            <label>Monto Cuota Inicial: @Model.montoCuotaInicial</label><br />
+            <label>Monto Letras a Pagar: @Model.montoLetraPagar</label><br />
+        </div>
+        <br />
+        <a href="javascript: history.go(-1)">Volver</a>
+    </center>
+</body>
+</html>

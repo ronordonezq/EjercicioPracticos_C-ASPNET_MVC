@@ -1,0 +1,31 @@
+﻿
+@{
+    Layout = null;
+    double f = ViewBag.f;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Convertir</title>
+</head>
+<body>
+    <br />
+    <center>
+        <div>
+            <h2>CONVERTIR °C a °F</h2>
+            <form action="/Temperatura/Temperatura" method="post">
+                <label>Ingrese el °C : </label>
+                <input type="text" name="grados" /><br /><br />
+                <input type="submit" value="CONVERTIR" onclick="move()" />
+            </form>
+            <br /><br />
+
+            <progress id="gradosf" value="@f" max="@f"> @f °F </progress><br />
+            <label>@f °F</label>
+        </div>
+    </center>
+</body>
+</html>

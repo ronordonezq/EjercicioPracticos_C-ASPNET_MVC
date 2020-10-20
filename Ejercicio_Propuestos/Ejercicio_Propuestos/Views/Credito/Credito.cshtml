@@ -1,0 +1,60 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Credito</title>
+</head>
+<body>
+    <br />
+    <div style="margin-left:40%;">
+        <h2>VENTAS AL CREDITO FINANCIADAS</h2>
+        <form action="/Credito/Calcular" method="post">
+            <label style="padding-left:10%;">Monto a financiar : </label>
+            <input type="text" name="montoCompra" /><br /><br />
+            <label>Tipo de Financiamiento: </label>
+            <select name="tipo" id="tipo">
+                <option value="0">-Selecciona-</option>
+                <option value="1">Opcion 1</option>
+                <option value="2">Opcion 2</option>
+                <option value="3">Opcion 3</option>
+            </select>
+            <br /><br />
+            <table border="1" style="width:50%">
+                <tr>
+                    <th>Tipo de Financiamiento</th>
+                    <th>Número de Letras</th>
+                    <th>% Interes</th>
+                    <th>Cuota Inicial</th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>2</td>
+                    <td>5</td>
+                    <td>60</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>4</td>
+                    <td>10</td>
+                    <td>50</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>6</td>
+                    <td>15</td>
+                    <td>35</td>
+                </tr>
+            </table>
+
+            <br />
+            <input type="submit" value="FIRMAR" />
+        </form>
+    </div>
+</body>
+</html>

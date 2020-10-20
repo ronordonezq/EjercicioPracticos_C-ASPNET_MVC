@@ -1,0 +1,47 @@
+﻿@model Ejercicio_Propuestos.Models.Matricula
+
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Calcular Monto de Matricula</title>
+</head>
+<body>
+    <br />
+    <div style="margin-left:40%;">
+        <h2>CALCULAR MONTO DE MATRICULA</h2>
+        <form action="/Matricula/Matricula" method="post">
+
+            <label>Colegio: </label>
+            <select name="tipo" id="tipo">
+                <option value="0">-Selecciona-</option>
+                <option value="1">Particular</option>
+                <option value="2">Franciscano</option>
+                <option value="3">Público</option>
+            </select>
+            <br /><br />
+            <label>Pertenece al:</label>
+            <input type="radio" name="gradoSuperior" value="1" />
+            <label>Tercio Superior</label>
+            <input type="radio" name="gradoSuperior" value="2" />
+            <label>Quinto Superior</label>
+            <br /><br />
+            <input type="checkbox" name="provincia" value="1" />
+            <label>es de Provincia </label>
+            <label style="padding-left:10%;">Cantidad de hermanos: </label>
+            <input type="number" name="hermano" /><br /><br />
+
+            <input type="submit" value="CALCULAR" />
+        </form>
+        <br /><br />
+        <label>Monto a Cancelar</label><br />
+        <label>Sub Total: </label><input type="text" name="subtotal" value="@Model.subTotal" /><br />
+        <label>Descuento: </label><input type="text" name="descuento" value="@Model.descuento" /><br />
+        <label>Total: </label><input type="text" name="total" value="@Model.total" /><br />
+    </div>
+</body>
+</html>
